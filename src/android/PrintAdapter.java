@@ -28,13 +28,15 @@ import android.print.PageRange;
 import android.print.PrintAttributes;
 import android.print.PrintDocumentAdapter;
 import android.print.PrintDocumentInfo;
-import android.support.annotation.NonNull;
-import android.support.v4.print.PrintHelper;
+
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
+import androidx.annotation.NonNull;
+import androidx.print.PrintHelper;
 
 import static android.print.PrintDocumentInfo.CONTENT_TYPE_DOCUMENT;
 
@@ -44,7 +46,8 @@ import static android.print.PrintDocumentInfo.CONTENT_TYPE_DOCUMENT;
 class PrintAdapter extends PrintDocumentAdapter
 {
     // The name of the print job
-    private final @NonNull String jobName;
+    private final @NonNull
+    String jobName;
 
     // Max page count
     private final int pageCount;

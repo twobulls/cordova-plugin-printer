@@ -21,8 +21,6 @@
 
 package de.appplant.cordova.plugin.printer;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.webkit.WebView;
 
 import org.apache.cordova.CallbackContext;
@@ -31,6 +29,9 @@ import org.apache.cordova.PluginResult;
 import org.apache.cordova.PluginResult.Status;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * Plugin to print HTML documents. Therefore it creates an invisible web view

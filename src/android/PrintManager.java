@@ -27,9 +27,7 @@ import android.graphics.Bitmap;
 import android.print.PrintAttributes;
 import android.print.PrintDocumentAdapter;
 import android.print.PrintJob;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.print.PrintHelper;
+
 import android.webkit.CookieManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -39,6 +37,10 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.InputStream;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.print.PrintHelper;
 
 import static android.content.Context.PRINT_SERVICE;
 import static android.os.Build.VERSION.SDK_INT;
@@ -51,10 +53,12 @@ import static de.appplant.cordova.plugin.printer.PrintContent.ContentType.UNSUPP
 class PrintManager
 {
     // The application context
-    private final @NonNull Context context;
+    private final @NonNull
+    Context context;
 
     // Reference required as long as the page does load the HTML markup
-    private @Nullable WebView view;
+    private @Nullable
+    WebView view;
 
     /**
      * Constructor

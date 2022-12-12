@@ -27,8 +27,10 @@ import android.os.ParcelFileDescriptor;
 import android.print.PageRange;
 import android.print.PrintAttributes;
 import android.print.PrintDocumentAdapter;
-import android.support.annotation.NonNull;
-import android.support.v4.print.PrintHelper;
+
+import androidx.annotation.NonNull;
+import androidx.print.PrintHelper;
+
 
 /**
  * Simple delegate class to have access to the onFinish method.
@@ -36,7 +38,8 @@ import android.support.v4.print.PrintHelper;
 class PrintProxy extends PrintDocumentAdapter
 {
     // Holds the delegate object
-    private final @NonNull PrintDocumentAdapter delegate;
+    private final @NonNull
+    PrintDocumentAdapter delegate;
 
     // The callback to inform once the job is done
     private final @NonNull PrintHelper.OnPrintFinishCallback callback;

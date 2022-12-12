@@ -26,8 +26,7 @@ import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Base64;
 
 import java.io.ByteArrayInputStream;
@@ -38,13 +37,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import androidx.annotation.NonNull;
+
 /**
  * Provides IO utility functions to deal with the resources.
  */
 class PrintIO
 {
     // Application context
-    private final @NonNull Context context;
+    private final @NonNull
+    Context context;
 
     /**
      * Initializes the asset utils.
