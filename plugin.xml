@@ -93,7 +93,7 @@
                 <param name="android-package" value="de.appplant.cordova.plugin.printer.Printer"/>
             </feature>
         </config-file>
-
+        <framework src="androidx.print:print:1.0.0" />
         <source-file src="src/android/PrintAdapter.java"
             target-dir="src/de/appplant/cordova/plugin/printer" />
 
