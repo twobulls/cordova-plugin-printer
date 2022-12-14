@@ -33,6 +33,8 @@ import java.net.URLConnection;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import static de.appplant.cordova.plugin.printer.PrintContent.ContentType.*;
+
 /**
  * Knows how to convert a resource URL into an io stream.
  */
@@ -78,11 +80,11 @@ class PrintContent
     @NonNull
     private ContentType getContentType (@Nullable String path)
     {
-        ContentType type = ContentType.PLAIN;
+        ContentType type = PLAIN;
 
         if (path == null || path.isEmpty() || path.charAt(0) == '<')
         {
-            type = ContentType.HTML;
+            type = HTML;
         }
         else if (path.matches("^[a-z0-9]+://.+"))
         {
@@ -96,7 +98,7 @@ class PrintContent
                 }
                 catch (IOException e)
                 {
-                    return ContentType.UNSUPPORTED;
+                    return UNSUPPORTED;
                 }
             }
             else
@@ -115,11 +117,11 @@ class PrintContent
                 case "image/x-icon":
                 case "image/vnd.microsoft.icon":
                 case "image/heif":
-                    return ContentType.IMAGE;
+                    return IMAGE;
                 case "application/pdf":
-                    return ContentType.PDF;
+                    return PDF;
                 default:
-                    return ContentType.UNSUPPORTED;
+                    return UNSUPPORTED;
             }
         }
 
